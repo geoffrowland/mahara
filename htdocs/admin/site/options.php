@@ -111,6 +111,14 @@ $siteoptionform = array(
                     'help'         => true,
                     'disabled'     => in_array('registration_sendweeklyupdates', $OVERRIDDEN),
                 ),
+                'mathjax' => array(
+                    'type'         => 'switchbox',
+                    'title'        => get_string('mathjax', 'admin'),
+                    'description'  => get_string('mathjaxdescription', 'admin'),
+                    'defaultvalue' => get_config('mathjax'),
+                    'help'         => true,
+                    'disabled'     => in_array('mathjax', $OVERRIDDEN),
+                ),
             ),
         ),
         'usersettings' => array(
@@ -783,7 +791,7 @@ function siteoptions_submit(Pieform $form, $values) {
         'sitename','lang','theme', 'dropdownmenu',
         'defaultaccountlifetime', 'defaultregistrationexpirylifetime', 'defaultaccountinactiveexpire', 'defaultaccountinactivewarn',
         'defaultaccountlifetimeupdate', 'allowpublicviews', 'allowpublicprofiles', 'allowanonymouspages', 'generatesitemap',
-        'registration_sendweeklyupdates', 'institutionexpirynotification', 'institutionautosuspend', 'requireregistrationconfirm',
+        'registration_sendweeklyupdates', 'mathjax', 'institutionexpirynotification', 'institutionautosuspend', 'requireregistrationconfirm',
         'showselfsearchsideblock', 'nousernames', 'searchplugin', 'showtagssideblock',
         'tagssideblockmaxtags', 'country', 'viewmicroheaders', 'userscanchooseviewthemes',
         'remoteavatars', 'userscanhiderealnames', 'antispam', 'spamhaus', 'surbl', 'anonymouscomments',
